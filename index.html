@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Assignment 7</title>
+</head>
+<body>
+
+    <header>
+        <h1>Item Collection</h1>
+        <p id="general-description">Loading description...</p>
+    </header>
+
+    <div>
+        <label for="filter-price">Show items over price:</label>
+        <input type="number" id="filter-price" placeholder="Enter price" min="0">
+        <button onclick="filterItems()">Filter</button><br><br>
+    </div>
+
+    <div class="controls">
+        <button onclick="sortItems('price', 'asc')">Sort by Price (Asc)</button>
+        <button onclick="sortItems('price', 'desc')">Sort by Price (Desc)</button>
+    </div>
+
+    <div id="items-container"></div>
+
+    <form id="item-form" onsubmit="addItem(event)">
+        <h2>Add a New Item</h2>
+        <input type="text" id="item-name" placeholder="Item Name" >
+        <input type="text" id="item-description" placeholder="Description" >
+        <input type="number" id="item-price" placeholder="Price" min="0" >
+        <button type="submit">Add Item</button>
+        <p id="err-msg"></p>
+    </form>
+
+    <div class="metadata-container">
+        <h2>author and creation</h2>
+        <p id="id-author"></p>
+        <p id="id-creation"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
