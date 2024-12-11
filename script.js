@@ -7,7 +7,6 @@ const data = {
 async function fetchData() {
     try {
         const response = await fetch('../data/items.json');
-        if (!response.ok) throw new Error('Network response was not ok');
         
         const jsonData = await response.json();
         
